@@ -282,3 +282,32 @@ Al final, podrás:
 **TODOs Totales**: 15 (todos claramente marcados)
 
 ¡Construyamos habilidades de ML listas para producción! 🚀
+
+---
+
+## 🛑 Cerrar el Laboratorio
+
+Cuando termines, usa el script de cierre para limpiar todo:
+
+```bash
+# Windows
+shutdown_lab.bat
+
+# Linux/Mac
+./shutdown_lab.sh
+
+# Python (multiplataforma)
+python shutdown_lab.py
+```
+
+**El script cierra**:
+- ✅ Procesos MLflow (UI y serve)
+- ✅ Servidores de API del modelo
+- ✅ Libera puertos 5000 y 8081
+- ✅ Limpia archivos temporales
+- ✅ Desactiva entorno virtual
+
+**Para reactivar**:
+1. `mlops_env\Scripts\activate` (Windows) o `source mlops_env/bin/activate` (Linux/Mac)
+2. `mlflow ui`
+3. `python serve_model_local.py`
