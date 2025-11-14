@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Proyectos/MLOps/mlruns/706337342860499919/d834fe19f9f54ce1a2b04bd989c4a433/artifacts
+end_time: 1763060451410
+entry_point_name: ''
+experiment_id: '706337342860499919'
+lifecycle_stage: active
+run_id: d834fe19f9f54ce1a2b04bd989c4a433
+run_name: RandomForest_depth_5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763060451058
+status: 3
+tags: []
+user_id: dbtlu

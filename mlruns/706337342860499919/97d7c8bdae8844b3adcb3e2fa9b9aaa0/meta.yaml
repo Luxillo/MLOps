@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Proyectos/MLOps/mlruns/706337342860499919/97d7c8bdae8844b3adcb3e2fa9b9aaa0/artifacts
+end_time: 1763060048408
+entry_point_name: ''
+experiment_id: '706337342860499919'
+lifecycle_stage: active
+run_id: 97d7c8bdae8844b3adcb3e2fa9b9aaa0
+run_name: nosy-doe-263
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763060048280
+status: 3
+tags: []
+user_id: dbtlu
