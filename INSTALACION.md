@@ -15,12 +15,23 @@ chmod +x setup.sh
 
 ## 🔧 Instalación Manual
 
-### 1. Instalar dependencias
+### 1. Crear entorno virtual
+```bash
+# Windows
+python -m venv mlops_env
+mlops_env\Scripts\activate
+
+# Linux/Mac
+python -m venv mlops_env
+source mlops_env/bin/activate
+```
+
+### 2. Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Verificar instalación
+### 3. Verificar instalación
 ```bash
 python verify_environment.py
 ```
