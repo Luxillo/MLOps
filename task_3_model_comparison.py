@@ -51,7 +51,7 @@ for model_name, model in models.items():
 
         # TODO 1 (Line 54): Log the model name as a parameter
         # Hint: mlflow.log_param("model_name", model_name)
-        mlflow.log_param("model_name", ___)  # FILL IN SECOND ARGUMENT
+        mlflow.log_param("", )  # FILL IN SECOND ARGUMENT
 
         # Train model
         model.fit(X_train, y_train)
@@ -68,15 +68,15 @@ for model_name, model in models.items():
         # Hint: mlflow.log_metrics({"rmse": rmse, "r2_score": r2, "mae": mae})
         # This is the most efficient way to log multiple metrics
         mlflow.log_metrics({
-            ___: rmse,  # FILL IN METRIC NAME
-            ___: r2,    # FILL IN METRIC NAME
-            ___: mae    # FILL IN METRIC NAME
+            "": ,  # FILL IN METRIC NAME
+            "": ,    # FILL IN METRIC NAME
+            "":     # FILL IN METRIC NAME
         })
 
         # TODO 3 (Line 79): Log the trained model as an artifact
         # Hint: mlflow.sklearn.log_model(model, "model")
         # This saves the model so it can be loaded and used later
-        mlflow.sklearn.log_model(___, "model")  # FILL IN FIRST ARGUMENT
+        mlflow.sklearn.log_model(, "model")  # FILL IN FIRST ARGUMENT
 
         # Set model type tag
         mlflow.set_tag("model_type", model_name)
@@ -87,18 +87,18 @@ for model_name, model in models.items():
         print(f"   ✅ Model saved\n")
 
 print("=" * 60)
-print("✅ Model comparison complete!")
+print("✅ ¡Comparación de modelos completada!")
 print()
-print("🌐 Next Steps:")
-print("   1. Open MLflow UI (View Port → 5000)")
-print("   2. Sort runs by 'r2_score' (descending)")
-print("   3. Click on the winning model run")
-print("   4. See the saved model artifact!")
+print("🌐 Próximos pasos:")
+print(" 1. Abra la interfaz de usuario de MLflow (Ventana → 5000)")
+print(" 2. Ordene las ejecuciones por 'r2_score' (descendente)")
+print(" 3. Haga clic en la ejecución del modelo ganador")
+print(" 4. ¡Vea el artefacto del modelo guardado!")
 print()
-print("💡 Typical Results:")
-print("   - LinearRegression:    R² ≈ 0.85")
-print("   - RandomForest:        R² ≈ 0.92")
-print("   - GradientBoosting:    R² ≈ 0.94 ← Usually wins!")
+print("💡 Resultados típicos:")
+print(" - Regresión lineal: R² ≈ 0.85")
+print(" - Bosque aleatorio: R² ≈ 0.92")
+print(" - Gradient Boosting: R² ≈ 0.94 ← ¡Suele ganar!")
 print("=" * 60)
 
 # Create success marker

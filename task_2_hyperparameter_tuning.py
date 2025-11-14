@@ -46,7 +46,7 @@ for depth in depths:
 
         # TODO 1 (Line 49): Log the max_depth parameter
         # Hint: mlflow.log_param("max_depth", depth)
-        mlflow.log_param("max_depth", depth)  # FILL IN FIRST ARGUMENT
+        mlflow.log_param(___, depth)  # FILL IN FIRST ARGUMENT
 
         # Train model
         model = RandomForestRegressor(
@@ -69,13 +69,13 @@ for depth in depths:
         # Hint: mlflow.log_params({"n_estimators": 100, "random_state": 42})
         # This is more efficient than logging parameters one by one
         mlflow.log_params({
-            "n_estimators": 100,  # FILL IN PARAMETER NAME
-            "random_state": 42    # FILL IN PARAMETER NAME
+            "": 100,  # FILL IN PARAMETER NAME
+            "": 42    # FILL IN PARAMETER NAME
         })
 
         # TODO 3 (Line 78): Log the R² score metric
         # Hint: mlflow.log_metric("r2_score", r2)
-        mlflow.log_metric("r2_score", r2)  # FILL IN FIRST ARGUMENT
+        mlflow.log_metric("", r2)  # FILL IN FIRST ARGUMENT
 
         # Log additional metrics
         mlflow.log_metric("rmse", rmse)
@@ -84,21 +84,21 @@ for depth in depths:
         # TODO 4 (Line 87): Tag this run with the model family
         # Hint: mlflow.set_tag("model_family", "RandomForest")
         # Tags help organize and filter experiments
-        mlflow.set_tag("model_family", "RandomForest")  # FILL IN BOTH ARGUMENTS
+        mlflow.set_tag("", "")  # FILL IN BOTH ARGUMENTS
 
         print(f"   ✅ RMSE: {rmse:.2f}")
         print(f"   ✅ R²: {r2:.4f}")
         print(f"   ✅ MAE: {mae:.2f}\n")
 
 print("=" * 60)
-print("✅ Hyperparameter tuning complete!")
+print("✅ ¡Ajuste de hiperparámetros completado!")
 print()
-print("🌐 Next Steps:")
-print("   1. Open MLflow UI (View Port → 5000)")
-print("   2. Click on 'DevOps-Response-Time-Prediction'")
-print("   3. Check boxes next to the 3 RandomForest runs")
-print("   4. Click 'Compare' button at top")
-print("   5. Sort by r2_score to find best configuration!")
+print("🌐 Próximos pasos:")
+print(" 1. Abra la interfaz de usuario de MLflow (Ventana → 5000)")
+print(" 2. Haga clic en 'DevOps-Response-Time-Prediction'")
+print(" 3. Marque las casillas junto a las 3 ejecuciones de RandomForest")
+print(" 4. Haga clic en el botón 'Comparar' en la parte superior")
+print(" 5. Ordene por r2_score para encontrar la mejor configuración!")
 print("=" * 60)
 
 # Create success marker
@@ -107,4 +107,4 @@ with open('markers/task2_tuning_complete.txt', 'w') as f:
     f.write("SUCCESS")
 
 print()
-print("✅ Task 2 Complete!")
+print("✅ Tarea 2 completada: ¡Ajuste de hiperparámetros realizado!")

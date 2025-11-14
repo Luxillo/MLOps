@@ -64,7 +64,7 @@ with mlflow.start_run(run_name="Production_Candidate_GradientBoosting") as run:
     # TODO 1 (Line 67): Log the trained model
     # Hint: mlflow.sklearn.log_model(model, "model")
     # This saves the model in the current run
-    mlflow.sklearn.log_model(___, ___)  # FILL IN BOTH ARGUMENTS
+    mlflow.sklearn.log_model(, "")  # FILL IN BOTH ARGUMENTS
 
     # Store run ID for registration (outside the run block)
     run_id = run.info.run_id
@@ -79,8 +79,8 @@ model_uri = f"runs:/{run_id}/model"
 # Hint: mlflow.register_model(model_uri, "DevOps-Response-Predictor")
 # This creates a new registered model (or new version if it exists)
 registered_model = mlflow.register_model(
-    ___,  # FILL IN: model URI
-    ___   # FILL IN: model name (e.g., "DevOps-Response-Predictor")
+    model_uri,  # FILL IN: model URI
+    ""   # FILL IN: model name (e.g., "DevOps-Response-Predictor")
 )
 
 model_name = registered_model.name
@@ -92,9 +92,9 @@ print(f"   ✅ Model registered: {model_name} v{model_version}\n")
 # Hint: client.set_registered_model_alias(model_name, "staging", model_version)
 # Modern MLflow uses aliases instead of stages (staging, production, champion, etc.)
 client.set_registered_model_alias(
-    ___,  # FILL IN: model name
+    ,  # FILL IN: model name
     ___,  # FILL IN: alias name (e.g., "staging")
-    ___   # FILL IN: model version
+     ____  # FILL IN: model version
 )
 
 print(f"   ✅ Model alias 'staging' set to v{model_version}\n")
@@ -120,25 +120,29 @@ for i, pred in enumerate(predictions):
 
 print()
 print("=" * 60)
-print("✅ Model Registry Setup Complete!")
+print("✅ ¡Configuración del registro de modelos completada!")
 print()
-print("🌐 Next Steps:")
-print("   1. Open MLflow UI (View Port → 5000)")
-print("   2. Click 'Models' tab at the top")
-print("   3. See 'DevOps-Response-Predictor' model")
-print("   4. View version, aliases, and metadata!")
+print("🌐 Próximos pasos:")
+print(" 1. Abra la interfaz de usuario de MLflow (Ventana → 5000)")
+print(" 2. Haga clic en la pestaña 'Modelos' en la parte superior")
+print(" 3. Vea el modelo 'DevOps-Response-Predictor'")
+print(" 4. Vea la versión, los alias y los metadatos!")
 print()
-print("🚀 Production Workflow:")
-print("   dev → staging → production")
-print("    ↓       ↓          ↓")
-print("   Test  Validate    Serve")
+print("🚀 Flujo de trabajo de producción:")
+print(" desarrollo → pruebas → producción")
+print(" ↓ ↓ ↓")
+print(" Probar Validar Servir")
 print("=" * 60)
 
 # Create success marker
-os.makedirs('markers', exist_ok=True)
-with open('markers/task4_registry_complete.txt', 'w') as f:
+os.makedirs('/root/markers', exist_ok=True)
+with open('/root/markers/task4_registry_complete.txt', 'w') as f:
     f.write("SUCCESS")
 
 print()
-print("✅ Task 4 Complete!")
-print("🎉 All MLflow fundamentals mastered!")
+print("✅ ¡Tarea 4 completada!")
+print("🎉 ¡Todos los fundamentos de MLflow dominados!")
+print()
+print("🧪 ¿Quieres probar tu modelo como API?")
+print("   → Ve al directorio 'test/' y sigue la guía")
+print("   → Ejecuta: cd test && python test_model_deployment.py")

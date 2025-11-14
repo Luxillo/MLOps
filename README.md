@@ -15,7 +15,7 @@ Domina MLflow a través de 4 tareas prácticas progresivas:
 
 ## 🌐 Accediendo a la UI de MLflow
 
-La UI de MLflow está ejecutándose en el puerto 5000. Para acceder:
+**Después de ejecutar `mlflow ui`**, para acceder:
 
 1. **Haz clic en el menú hamburguesa (≡)** en la esquina superior derecha
 2. **Selecciona "View Port"**
@@ -58,6 +58,34 @@ Todo está preconfigurado:
 - ✅ Directorio de seguimiento: `/root/mlruns`
 - ✅ Dataset: `/root/code/devops_metrics.csv`
 - ✅ Paquetes de Python: scikit-learn, pandas, numpy, matplotlib
+
+---
+
+## 🚀 Iniciar el Laboratorio
+
+### 1. Activar entorno virtual
+```bash
+# Windows
+mlops_env\Scripts\activate
+
+# Linux/Mac
+source mlops_env/bin/activate
+```
+
+### 2. Iniciar MLflow UI
+```bash
+# Opción 1: Comando estándar
+mlflow ui
+
+# Opción 2: Comando completo (si hay problemas)
+mlflow ui --host 0.0.0.0 --port 5000
+```
+
+### 3. Verificar acceso
+- ✅ Terminal muestra: `Listening at: http://127.0.0.1:5000`
+- ✅ UI accesible en puerto 5000 (ver instrucciones arriba)
+
+💡 **Mantén la terminal abierta** - MLflow UI debe ejecutarse durante todo el lab
 
 ---
 
@@ -159,6 +187,37 @@ MLflow Registry te permite:
 - Cargar modelo registrado para predicciones
 
 **Después de completar**: UI de MLflow → Pestaña Models → ¡Ver modelo registrado!
+
+---
+
+## 🧪 Pruebas del Modelo (Bonus)
+
+**Objetivo**: Probar tu modelo registrado como API REST
+
+**Ubicación**: Directorio `test/`
+
+**Métodos disponibles**:
+1. **Automático**: `python test/test_model_deployment.py`
+2. **Manual**: `python test/serve_model.py` + `python test/test_requests.py`
+3. **Curl**: `mlflow models serve` + comandos curl
+
+**Aprenderás**:
+- Servir modelos MLflow como API
+- Enviar requests HTTP al modelo
+- Probar diferentes escenarios de carga
+- Validar predicciones en tiempo real
+
+**Después de completar**: ¡Modelo listo para producción!
+
+### 🚀 Prueba Rápida del Modelo
+
+```bash
+# Terminal 1: Servir modelo
+python serve_model_local.py
+
+# Terminal 2: Probar modelo
+python test_model_api.py
+```
 
 ---
 

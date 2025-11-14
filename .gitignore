@@ -1,1 +1,6 @@
 /mlflow*
+/scripts_base
+/test
+/base
+/markers
+/mlruns

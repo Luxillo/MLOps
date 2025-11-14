@@ -23,7 +23,7 @@ import os
 # TODO 1 (Línea 26): Establecer el nombre del experimento MLflow
 # Pista: mlflow.set_experiment("DevOps-Response-Time-Prediction")
 # Esto agrupa todas tus ejecuciones bajo un experimento en la UI de MLflow
-mlflow.set_experiment("DevOps-Response-Time-Prediction")  # REEMPLAZA ESTA LÍNEA
+mlflow._  # REEMPLAZA ESTA LÍNEA
 
 # Cargar el dataset
 print("📊 Cargando dataset de métricas DevOps...")
@@ -46,7 +46,7 @@ print()
 # TODO 2 (Línea 49): Iniciar una ejecución MLflow
 # Pista: with mlflow.start_run():
 # Este administrador de contexto rastrea todo lo que sucede dentro
-with mlflow.start_run():  # COMPLETA ESTA LÍNEA
+with mlflow._():  # COMPLETA ESTA LÍNEA
     print("🔬 Entrenando modelo de Regresión Lineal...")
 
     # Entrenar el modelo
@@ -70,7 +70,7 @@ with mlflow.start_run():  # COMPLETA ESTA LÍNEA
     # TODO 3 (Línea 73): Registrar el parámetro tipo de modelo
     # Pista: mlflow.log_param("model_type", "LinearRegression")
     # Los parámetros son entradas a tu proceso de entrenamiento
-    mlflow.log_param("model_type", "LinearRegression")  # COMPLETA AMBOS ARGUMENTOS
+    mlflow.log_param(___,___)  # COMPLETA AMBOS ARGUMENTOS
 
     # Registrar parámetro adicional
     mlflow.log_param("random_state", 42)
@@ -78,7 +78,7 @@ with mlflow.start_run():  # COMPLETA ESTA LÍNEA
     # TODO 4 (Línea 81): Registrar la métrica RMSE
     # Pista: mlflow.log_metric("rmse", rmse)
     # Las métricas son salidas que miden el rendimiento del modelo
-    mlflow.log_metric("rmse", rmse)  # COMPLETA AMBOS ARGUMENTOS
+    mlflow.log_metric(__, rmse)  # COMPLETA AMBOS ARGUMENTOS
 
     # Registrar métricas adicionales
     mlflow.log_metric("r2_score", r2)
